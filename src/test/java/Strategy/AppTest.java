@@ -1,4 +1,4 @@
-package Strategy.SimUDuck;
+package Strategy;
 
 import static org.junit.Assert.assertTrue;
 
