@@ -3,6 +3,7 @@ package Observer.WeatherStation.Display;
 import Observer.WeatherStation.Observer.Observer;
 import Observer.WeatherStation.Subject.Subject;
 
+
 public class StatisticsDisplay implements Observer, DisplayElement {
     private float minTemp = 200;
     private float maxTemp = 0.0f;
