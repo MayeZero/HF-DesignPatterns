@@ -1,14 +1,10 @@
-package Singleton.Hungry;
+package Singleton.DoubleChecked;
 
 public class ChocolateBoiler {
     private boolean empty;
     private boolean boiled;
 
-    private static ChocolateBoiler singleChocolateBoiler = new ChocolateBoiler();
-
-//    static{
-//        singleChocolateBoiler = new ChocolateBoiler();
-//    }
+    private volatile static ChocolateBoiler singleChocolateBoiler;
 
     private ChocolateBoiler(){
         empty = true;
@@ -16,6 +12,13 @@ public class ChocolateBoiler {
     }
 
     public static ChocolateBoiler getInstance(){
+        if(singleChocolateBoiler == null){
+            synchronized (ChocolateBoiler.class){
+                if(singleChocolateBoiler == null){
+                    singleChocolateBoiler = new ChocolateBoiler();
+                }
+            }
+        }
         return singleChocolateBoiler;
     }
 
