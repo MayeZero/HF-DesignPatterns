@@ -1,4 +1,4 @@
-package Singleton;
+package Singleton.Lazy;
 
 public class ChocolateBoiler {
     private boolean empty;
@@ -11,7 +11,7 @@ public class ChocolateBoiler {
         boiled = false;
     }
 
-    public static synchronized ChocolateBoiler getInstance(){
+    public static ChocolateBoiler getInstance(){
         if(singleChocolateBoiler == null){
             singleChocolateBoiler = new ChocolateBoiler();
         }
