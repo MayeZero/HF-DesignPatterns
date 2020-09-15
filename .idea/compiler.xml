@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HF-DesignPatterns" />
         <module name="SimUDuck" />
+        <module name="HF-DesignPatterns" />
       </profile>
     </annotationProcessing>
   </component>
