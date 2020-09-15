@@ -6,6 +6,10 @@ public class ChocolateBoiler {
 
     private static ChocolateBoiler singleChocolateBoiler = new ChocolateBoiler();
 
+//    static{
+//        singleChocolateBoiler = new ChocolateBoiler();
+//    }
+    
     private ChocolateBoiler(){
         empty = true;
         boiled = false;
