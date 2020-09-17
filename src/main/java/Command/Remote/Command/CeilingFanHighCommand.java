@@ -2,17 +2,17 @@ package Command.Remote.Command;
 
 import Command.Remote.Receiver.CeilingFan;
 
-public class CeilingFanOffCommand implements Command{
-    int prevSpeed;
+public class CeilingFanHighCommand implements Command{
     CeilingFan ceilingFan;
+    int prevSpeed;
 
-    public CeilingFanOffCommand(CeilingFan ceilingFan){
+    public CeilingFanHighCommand(CeilingFan ceilingFan){
         this.ceilingFan = ceilingFan;
     }
 
     public void execute(){
         prevSpeed = ceilingFan.getSpeed();
-        ceilingFan.off();
+        ceilingFan.high();
     }
 
     public void undo(){
